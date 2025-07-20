@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://silvasatin.adv.br/sitemap.xml
+
+# Disallow common unnecessary paths
+Disallow: /private/
+Disallow: /*.log$
+Disallow: /temp/
+
+# Allow all search engines to access the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit/
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
