@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silva Satin Advocacia | Direito Imobiliário, Família e Sucessões em Maringá</title>
+    <meta name="description" content="Escritório de advocacia em Maringá especializado em Direito Imobiliário, Família e Sucessões. Atendimento humanizado com a Dra. Maria Satin, OAB/PR 97.566." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ink: #211d18;
+        --gold: #b98a34;
+        --gold-soft: #d9b76a;
+        --cream: #f4eee2;
+        --cream-2: #efe7d6;
+        --paper: #ffffff;
+        --text: #35302a;
+        --muted: #7a7062;
+        --line: #e4dbc9;
+        --radius: 2px;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        color: var(--text); background: var(--cream);
+        line-height: 1.7; font-size: 17px; -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, .display {
+        font-family: "Fraunces", Georgia, serif; font-weight: 500;
+        line-height: 1.1; letter-spacing: -0.015em; color: var(--ink);
+      }
+      a { color: inherit; text-decoration: none; transition: all 0.25s ease; }
+      img { max-width: 100%; display: block; }
+      .wrap { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
+      .eyebrow {
+        font-size: 0.7rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase;
+        color: var(--gold); display: block; margin-bottom: 18px;
+      }
+      .rule { height: 1px; background: var(--line); border: 0; }
+
+      header {
+        position: fixed; inset: 0 0 auto 0; z-index: 50;
+        background: rgba(244, 238, 226, 0.85); backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+      .brand { display: flex; align-items: center; gap: 12px; }
+      .brand img { height: 46px; }
+      .brand .bname { font-family: "Fraunces", serif; font-size: 1.25rem; font-weight: 600; letter-spacing: 0.05em; color: var(--ink); }
+      .menu { display: flex; gap: 34px; }
+      .menu a { font-size: 0.9rem; font-weight: 500; color: var(--muted); position: relative; }
+      .menu a:hover { color: var(--ink); }
+      .menu a::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 1px; background: var(--gold); transition: width 0.25s ease; }
+      .menu a:hover::after { width: 100%; }
+      .nav-side { display: flex; align-items: center; gap: 20px; }
+      .socials { display: flex; gap: 14px; }
+      .socials a { color: var(--muted); }
+      .socials a:hover { color: var(--gold); }
+      .socials svg { width: 19px; height: 19px; fill: currentColor; }
+      .btn { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 0.95rem; padding: 13px 26px; cursor: pointer; }
+      .btn svg { width: 17px; height: 17px; fill: currentColor; }
+      .btn-solid { background: var(--ink); color: #fff; border-radius: var(--radius); }
+      .btn-solid:hover { background: var(--gold); }
+      .btn-line { border: 1px solid var(--ink); color: var(--ink); border-radius: var(--radius); }
+      .btn-line:hover { background: var(--ink); color: #fff; }
+
+      .hero { padding: 176px 0 96px; background: var(--cream); }
+      .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+      .hero h1 { font-size: clamp(3.2rem, 6.4vw, 5.4rem); font-weight: 400; margin-bottom: 26px; }
+      .hero h1 em { font-style: italic; color: var(--gold); }
+      .hero p { color: var(--muted); font-size: 1.14rem; max-width: 44ch; margin-bottom: 34px; }
+      .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+      .hero-figure { position: relative; }
+      .hero-figure img { width: 100%; border-radius: 3px; filter: grayscale(0.15); }
+      .hero-figure figcaption { position: absolute; left: -24px; bottom: 30px; background: var(--paper); padding: 16px 22px; box-shadow: 0 16px 40px rgba(33,29,24,0.12); }
+      .hero-figure .fc-name { font-family: "Fraunces", serif; font-size: 1.2rem; color: var(--ink); }
+      .hero-figure .fc-oab { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.05em; }
+
+      section { padding: 100px 0; }
+      .sec-head { max-width: 620px; margin-bottom: 60px; }
+      .sec-head h2 { font-size: clamp(2.3rem, 4.4vw, 3.4rem); font-weight: 400; margin-bottom: 16px; }
+      .sec-head p { color: var(--muted); font-size: 1.06rem; }
+
+      .areas { background: var(--paper); }
+      .area-row { display: grid; grid-template-columns: 80px 1fr auto; gap: 34px; align-items: start; padding: 40px 0; border-top: 1px solid var(--line); }
+      .area-row:last-child { border-bottom: 1px solid var(--line); }
+      .area-row .num { font-family: "Fraunces", serif; font-size: 2.6rem; color: var(--gold-soft); font-weight: 400; }
+      .area-row h3 { font-size: 1.9rem; font-weight: 500; margin-bottom: 10px; }
+      .area-row p { color: var(--muted); max-width: 62ch; }
+      .area-row .go { align-self: center; white-space: nowrap; color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+      .area-row .go:hover { color: var(--ink); }
+      .area-row:hover h3 { color: var(--gold); }
+
+      .about { background: var(--cream-2); }
+      .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 66px; align-items: center; }
+      .about-photo img { width: 100%; max-width: 400px; border-radius: 3px; filter: grayscale(0.1); margin: 0 auto; }
+      .about h2 { font-size: clamp(2.2rem, 3.6vw, 3rem); font-weight: 400; margin-bottom: 4px; }
+      .about .role { color: var(--gold); font-weight: 600; font-size: 0.92rem; letter-spacing: 0.05em; margin-bottom: 26px; }
+      .about p { color: var(--muted); margin-bottom: 18px; }
+      .about strong { color: var(--text); font-weight: 600; }
+      .about .facts { display: flex; gap: 36px; margin-top: 30px; }
+      .about .facts .n { font-family: "Fraunces", serif; font-size: 2rem; color: var(--ink); }
+      .about .facts .l { font-size: 0.82rem; color: var(--muted); }
+
+      .local { background: var(--paper); }
+      .local-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 44px; align-items: stretch; }
+      .info-card { background: var(--cream); padding: 40px; border-radius: 3px; }
+      .info-card h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 12px; }
+      .info-card address { font-style: normal; line-height: 1.9; color: var(--text); }
+      .info-card .hours { margin: 26px 0; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .info-card .hours strong { color: var(--ink); }
+      .map { border-radius: 3px; overflow: hidden; min-height: 400px; box-shadow: 0 18px 46px rgba(33,29,24,0.12); }
+      .map iframe { width: 100%; height: 100%; min-height: 400px; border: 0; display: block; filter: grayscale(0.2); }
+
+      .contact { background: var(--ink); color: #fff; text-align: center; }
+      .contact .eyebrow { color: var(--gold-soft); }
+      .contact h2 { color: #fff; font-size: clamp(2.6rem, 5.4vw, 4rem); font-weight: 400; margin-bottom: 18px; }
+      .contact .lead { color: rgba(255,255,255,0.7); max-width: 50ch; margin: 0 auto 44px; font-size: 1.1rem; }
+      .contact-methods { display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; margin-bottom: 46px; }
+      .cm { color: #fff; }
+      .cm .k { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 6px; }
+      .cm .v { font-family: "Fraunces", serif; font-size: 1.3rem; }
+      .cm:hover .v { color: var(--gold-soft); }
+      .contact .btn-big { display: inline-flex; align-items: center; gap: 11px; background: #25d366; color: #fff; padding: 17px 40px; border-radius: 2px; font-weight: 600; font-size: 1.08rem; }
+      .contact .btn-big:hover { background: #1fb457; }
+      .contact .btn-big svg { width: 20px; height: 20px; fill: #fff; }
+
+      footer { background: #17130f; color: rgba(255,255,255,0.55); padding: 50px 0 38px; text-align: center; }
+      footer .brand { justify-content: center; margin-bottom: 18px; }
+      footer .fmenu { display: flex; gap: 26px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
+      footer .fmenu a { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+      footer .fmenu a:hover { color: var(--gold-soft); }
+      footer small { display: block; font-size: 0.82rem; line-height: 2; }
+      footer .oab { color: var(--gold-soft); }
+
+      .wa-float { position: fixed; bottom: 26px; right: 26px; z-index: 90; width: 58px; height: 58px; border-radius: 50%; background: #25d366; display: grid; place-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.4); }
+      .wa-float svg { width: 31px; height: 31px; fill: #fff; }
+
+      @media (max-width: 900px) {
+        .hero-grid, .about-grid, .local-grid { grid-template-columns: 1fr; }
+        .hero-figure, .menu { display: none; }
+        .area-row { grid-template-columns: 1fr; gap: 10px; }
+        .area-row .num { font-size: 1.8rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a href="#inicio" class="brand"><img src="../assets/logo.webp" alt="Silva Satin Advocacia" /><span class="bname">SILVA SATIN</span></a>
+        <nav class="menu">
+          <a href="#inicio">Início</a><a href="#areas">Áreas</a><a href="#sobre">Sobre</a><a href="#local">Localização</a><a href="#contato">Contato</a>
+        </nav>
+        <div class="nav-side">
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4H7v-3.5h3.1V9.4c0-3 1.8-4.7 4.6-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.4l-.5 3.5h-2.9v8.4A12 12 0 0024 12z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.5A6.3 6.3 0 1018.3 12 6.3 6.3 0 0012 5.7zm0 10.4A4.1 4.1 0 1116.1 12 4.1 4.1 0 0112 16.1zm6.5-10.9a1.5 1.5 0 11-1.5-1.5 1.5 1.5 0 011.5 1.5z"/></svg></a>
+            <a href="https://wa.me/554497128599" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg></a>
+          </div>
+          <a href="https://wa.me/554497128599" class="btn btn-solid"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>Consulta</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Advocacia · Maringá / PR</span>
+          <h1>Direito com <em>cuidado</em> e técnica</h1>
+          <p>Escritório especializado em Direito Imobiliário, Família e Sucessões. Atendimento humanizado e personalizado em Maringá e região do Norte do Paraná.</p>
+          <div class="hero-cta">
+            <a href="https://wa.me/554497128599" class="btn btn-solid"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>Falar no WhatsApp</a>
+            <a href="#areas" class="btn btn-line">Ver áreas de atuação</a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="../assets/advogada.webp" alt="Dra. Maria Satin" />
+          <figcaption>
+            <div class="fc-name">Dra. Maria Satin</div>
+            <div class="fc-oab">OAB/PR 97.566</div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="areas" id="areas">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Áreas de atuação</span>
+          <h2>Três frentes, uma advocacia dedicada</h2>
+          <p>Serviços jurídicos especializados com foco em resultados eficazes para cada cliente.</p>
+        </div>
+        <div class="area-row">
+          <div class="num">01</div>
+          <div>
+            <h3>Direito Imobiliário</h3>
+            <p>Regularização de imóveis, contratos de compra e venda, locação, atraso de obras, adjudicação compulsória, usucapião e demais questões do mercado imobiliário.</p>
+          </div>
+          <a class="go" href="https://wa.me/554497128599">Falar sobre →</a>
+        </div>
+        <div class="area-row">
+          <div class="num">02</div>
+          <div>
+            <h3>Direito de Família</h3>
+            <p>Divórcio, união estável, guarda de filhos, pensão alimentícia e demais temas — sempre priorizando a resolução amigável e o bem-estar familiar.</p>
+          </div>
+          <a class="go" href="https://wa.me/554497128599">Falar sobre →</a>
+        </div>
+        <div class="area-row">
+          <div class="num">03</div>
+          <div>
+            <h3>Direito das Sucessões</h3>
+            <p>Inventário, partilha de bens e testamentos, com segurança jurídica e eficiência em toda a transferência de patrimônio.</p>
+          </div>
+          <a class="go" href="https://wa.me/554497128599">Falar sobre →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="wrap about-grid">
+        <div class="about-photo"><img src="../assets/advogada.webp" alt="Dra. Maria Satin, advogada em Maringá" /></div>
+        <div>
+          <span class="eyebrow">Quem atende você</span>
+          <h2>Dra. Maria Satin</h2>
+          <div class="role">Especialista em Direito Civil</div>
+          <p><strong>Formação sólida:</strong> Graduada em Direito pela UniCV (2016), pós-graduada em Direito Constitucional (2019) e em Direito Civil e Processo Civil (2022–2023).</p>
+          <p>Dedica-se à defesa dos direitos da família, sucessões e imobiliário, com trabalho humanizado, excelência técnica e responsabilidade profissional.</p>
+          <div class="facts">
+            <div><div class="n">7+</div><div class="l">anos de advocacia</div></div>
+            <div><div class="n">100+</div><div class="l">processos</div></div>
+            <div><div class="n">2018</div><div class="l">desde</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="local" id="local">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Onde estamos</span>
+          <h2>Escritório em Maringá / PR</h2>
+          <p>Atendimento por agendamento, em ambiente reservado e acolhedor.</p>
+        </div>
+        <div class="local-grid">
+          <div class="info-card">
+            <h3>Endereço</h3>
+            <address>Rua Pioneiro Mário Pagani, 88 — Sala 2<br />Maringá — PR, 87055-440<br />Brasil</address>
+            <div class="hours"><strong>Segunda a Sexta</strong> · 13h às 18h<br /><span style="color:var(--muted)">Atendimentos por agendamento</span></div>
+            <a href="https://wa.me/554497128599" class="btn btn-solid"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>Agendar pelo WhatsApp</a>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.1263231044722!2d-51.91673532297042!3d-23.455907457729772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI3JzIxLjMiUyA1McKwNTQnNTEuMCJX!5e0!3m2!1sen!2sbr!4v1721777402883!5m2!1sen!2sbr" loading="lazy" title="Mapa Silva Satin Advocacia"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="wrap">
+        <span class="eyebrow">Fale com a gente</span>
+        <h2>Agende sua consulta</h2>
+        <p class="lead">Conte o seu caso e receba a orientação de quem atua com dedicação em Maringá e região.</p>
+        <div class="contact-methods">
+          <a class="cm" href="https://wa.me/554497128599"><div class="k">WhatsApp / Telefone</div><div class="v">(44) 9712-8599</div></a>
+          <a class="cm" href="mailto:advsilvasatin@gmail.com"><div class="k">Email</div><div class="v">advsilvasatin@gmail.com</div></a>
+          <a class="cm" href="#local"><div class="k">Endereço</div><div class="v">Mário Pagani, 88 · Maringá</div></a>
+        </div>
+        <a href="https://wa.me/554497128599" class="btn-big"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg>Iniciar conversa no WhatsApp</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="brand"><img src="../assets/logo.webp" alt="Silva Satin" style="height:52px" /></div>
+        <nav class="fmenu"><a href="#inicio">Início</a><a href="#areas">Áreas</a><a href="#sobre">Sobre</a><a href="#local">Localização</a><a href="#contato">Contato</a></nav>
+        <small class="oab">OAB/PR 97.566 · Direito Imobiliário, Família e Sucessões</small>
+        <small>Maringá, Paraná · Atendimento personalizado e humanizado</small>
+        <small>© 2025 Silva Satin Advocacia — Todos os direitos reservados</small>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/554497128599" class="wa-float" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg></a>
+  </body>
+</html>
