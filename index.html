@@ -250,7 +250,6 @@
               <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg></div>
               <address>Rua Pioneiro Mário Pagani, 88 — Sala 2<br />Maringá — PR, 87055-440</address>
               <div class="map-actions">
-                <button type="button" class="btn btn-outline" id="mapLoadBtn">Ver mapa</button>
                 <a class="map-ext-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Pioneiro+M%C3%A1rio+Pagani+88+Maring%C3%A1+PR" target="_blank" rel="noopener noreferrer">Ver no Google Maps ↗</a>
               </div>
             </div>
@@ -298,10 +297,10 @@
 
     <script>
       (function () {
-        var btn = document.getElementById("mapLoadBtn");
-        if (!btn) return;
-        btn.addEventListener("click", function () {
-          var map = document.getElementById("map");
+        var map = document.getElementById("map");
+        if (!map) return;
+
+        function loadMap() {
           var iframe = document.createElement("iframe");
           iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.1263231044722!2d-51.91673532297042!3d-23.455907457729772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI3JzIxLjMiUyA1McKwNTQnNTEuMCJX!5e0!3m2!1sen!2sbr!4v1721777402883!5m2!1sen!2sbr";
           iframe.loading = "lazy";
@@ -313,7 +312,27 @@
           iframe.style.display = "block";
           map.innerHTML = "";
           map.appendChild(iframe);
-        });
+        }
+
+        // Carrega o mapa automaticamente quando a seção se aproxima da tela
+        // (não bloqueia LCP/carregamento inicial, mas não exige clique do usuário).
+        if ("IntersectionObserver" in window) {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  loadMap();
+                  observer.disconnect();
+                }
+              });
+            },
+            { rootMargin: "300px 0px" }
+          );
+          observer.observe(map);
+        } else {
+          // Fallback para navegadores sem IntersectionObserver: carrega após o load.
+          window.addEventListener("load", loadMap);
+        }
       })();
     </script>
   </body>
