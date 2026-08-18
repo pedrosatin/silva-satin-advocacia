@@ -146,6 +146,10 @@ footer .oab { color: var(--gold); }
   .socials { gap: 8px; }
   .socials a { width: 34px; height: 34px; }
   .wrap { padding: 0 20px; }
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
   .cm { width: 100%; }
 }
 @media (max-width: 360px) {
