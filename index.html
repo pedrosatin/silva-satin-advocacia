@@ -314,15 +314,30 @@
           map.appendChild(iframe);
         }
 
-        // Carrega o mapa automaticamente quando a seção se aproxima da tela
-        // (não bloqueia LCP/carregamento inicial, mas não exige clique do usuário).
+        // Carrega o mapa automaticamente quando a seção se aproxima da tela,
+        // mas só depois que a página inteira já carregou (window.load) — assim
+        // o mapa nunca disputa banda/CPU com o conteúdo inicial, mesmo que o
+        // usuário role rápido até a seção antes do resto da página terminar.
+        var pageLoaded = false;
+        var sectionNear = false;
+
+        function maybeLoadMap() {
+          if (pageLoaded && sectionNear) loadMap();
+        }
+
+        window.addEventListener("load", function () {
+          pageLoaded = true;
+          maybeLoadMap();
+        });
+
         if ("IntersectionObserver" in window) {
           var observer = new IntersectionObserver(
             function (entries) {
               entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                  loadMap();
+                  sectionNear = true;
                   observer.disconnect();
+                  maybeLoadMap();
                 }
               });
             },
@@ -331,7 +346,7 @@
           observer.observe(map);
         } else {
           // Fallback para navegadores sem IntersectionObserver: carrega após o load.
-          window.addEventListener("load", loadMap);
+          sectionNear = true;
         }
       })();
     </script>
