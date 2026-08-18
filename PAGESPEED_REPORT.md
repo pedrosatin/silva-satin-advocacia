@@ -20,7 +20,7 @@ O maior vilão de performance: o mapa embutido carrega scripts da API do Google 
 
 **Correção (prioridade máxima):** trocar o embed ativo por um "carregar mapa sob demanda" — mostrar uma imagem estática leve (ou um placeholder com o endereço) e só carregar o iframe/script do Google Maps quando o usuário clicar ("Ver mapa"/"Ver no Google Maps"), ou usar `loading="lazy"` num `<iframe>` do Google Maps Embed API (que não exige JS pesado) em vez do JS SDK completo.
 
-**Implementado:** o `<iframe>` do Google Maps foi removido do carregamento inicial. Em seu lugar, `#local` mostra um card estático (`.map-placeholder`) com o endereço, um botão "Ver mapa" (que injeta o `<iframe>` via JS somente no clique) e um link "Ver no Google Maps ↗" que abre o endereço direto no Google Maps em nova aba. Nenhum recurso do Maps é buscado no carregamento da página.
+**Implementado:** o `<iframe>` do Google Maps foi removido do carregamento inicial. Em seu lugar, `#local` mostra um card estático (`.map-placeholder`) com o endereço e um link "Ver no Google Maps ↗" (fallback, abre o endereço em nova aba). O mapa em si carrega **automaticamente, sem exigir clique**: um `IntersectionObserver` injeta o `<iframe>` assim que a seção "Onde estamos" se aproxima da viewport (`rootMargin: 300px`), ou seja, só depois que o usuário já rolou boa parte da página — nada do Maps é buscado no carregamento inicial, mas o mapa aparece sozinho quando o visitante chega perto dessa seção (com fallback para `window.load` em navegadores sem `IntersectionObserver`).
 
 ### 2. ✅ Corrigido — Contraste de cor insuficiente (Accessibility, WCAG AA)
 A cor dourada da marca `#a97e34` usada em textos (eyebrows, links "Falar sobre meu caso →") tem contraste de apenas 3.2–3.67:1 contra fundos claros (`#fbf6ea`, `#f6efe0`, `#ffffff`). O mínimo exigido é 4.5:1 para texto normal.
@@ -44,7 +44,7 @@ O documento não tem um elemento `<main>`, dificultando navegação por leitores
 **Implementado:** `assets/logo.webp` redimensionado de 900×900 (14,2 KiB) para 200×200 (5,1 KiB) via ImageMagick — folga suficiente para retina 2x sobre a exibição de 77×77.
 
 ### 5. Mapa estático do Google (fallback) sem compressão moderna (~4.6 KiB)
-Não aplicável mais: com a correção do item 1, o mapa deixou de carregar qualquer imagem/iframe estático no carregamento inicial — só é buscado sob demanda, quando o usuário clica em "Ver mapa".
+Não aplicável mais: com a correção do item 1, o mapa deixou de carregar qualquer imagem/iframe estático no carregamento inicial — só é buscado automaticamente quando a seção entra em (ou perto de) viewport.
 
 ### 6. CSS e fontes render-blocking (~300ms) e cache lifetimes (~15-23 KiB)
 `styles.css` e a fonte `Marcellus`/`Inter` do Google Fonts bloqueiam o render inicial.
