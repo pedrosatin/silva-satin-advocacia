@@ -161,6 +161,7 @@
       </div>
     </header>
 
+    <main>
     <section class="hero" id="inicio">
       <div class="wrap hero-grid">
         <div>
@@ -244,8 +245,14 @@
             <div class="hours"><strong>Segunda a Sexta</strong> · 13h às 18h<br /><span style="color:var(--muted)">Atendimentos por agendamento</span></div>
             <a href="https://wa.me/554497128599" class="btn btn-wa"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>Agendar pelo WhatsApp</a>
           </div>
-          <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.1263231044722!2d-51.91673532297042!3d-23.455907457729772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI3JzIxLjMiUyA1McKwNTQnNTEuMCJX!5e0!3m2!1sen!2sbr!4v1721777402883!5m2!1sen!2sbr" loading="lazy" title="Mapa Silva Satin Advocacia"></iframe>
+          <div class="map" id="map">
+            <div class="map-placeholder">
+              <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg></div>
+              <address>Rua Pioneiro Mário Pagani, 88 — Sala 2<br />Maringá — PR, 87055-440</address>
+              <div class="map-actions">
+                <a class="map-ext-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Pioneiro+M%C3%A1rio+Pagani+88+Maring%C3%A1+PR" target="_blank" rel="noopener noreferrer">Ver no Google Maps ↗</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -273,6 +280,7 @@
         <a href="https://wa.me/554497128599" class="btn btn-dark" style="font-size:1.05rem;padding:16px 34px"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>Iniciar conversa no WhatsApp</a>
       </div>
     </section>
+    </main>
 
     <footer>
       <div class="wrap">
@@ -286,5 +294,61 @@
     </footer>
 
     <a href="https://wa.me/554497128599" class="wa-float" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg></a>
+
+    <script>
+      (function () {
+        var map = document.getElementById("map");
+        if (!map) return;
+
+        function loadMap() {
+          var iframe = document.createElement("iframe");
+          iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.1263231044722!2d-51.91673532297042!3d-23.455907457729772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI3JzIxLjMiUyA1McKwNTQnNTEuMCJX!5e0!3m2!1sen!2sbr!4v1721777402883!5m2!1sen!2sbr";
+          iframe.loading = "lazy";
+          iframe.title = "Mapa Silva Satin Advocacia";
+          iframe.style.border = "0";
+          iframe.style.width = "100%";
+          iframe.style.height = "100%";
+          iframe.style.minHeight = "400px";
+          iframe.style.display = "block";
+          map.innerHTML = "";
+          map.appendChild(iframe);
+        }
+
+        // Carrega o mapa automaticamente quando a seção se aproxima da tela,
+        // mas só depois que a página inteira já carregou (window.load) — assim
+        // o mapa nunca disputa banda/CPU com o conteúdo inicial, mesmo que o
+        // usuário role rápido até a seção antes do resto da página terminar.
+        var pageLoaded = false;
+        var sectionNear = false;
+
+        function maybeLoadMap() {
+          if (pageLoaded && sectionNear) loadMap();
+        }
+
+        window.addEventListener("load", function () {
+          pageLoaded = true;
+          maybeLoadMap();
+        });
+
+        if ("IntersectionObserver" in window) {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  sectionNear = true;
+                  observer.disconnect();
+                  maybeLoadMap();
+                }
+              });
+            },
+            { rootMargin: "300px 0px" }
+          );
+          observer.observe(map);
+        } else {
+          // Fallback para navegadores sem IntersectionObserver: carrega após o load.
+          sectionNear = true;
+        }
+      })();
+    </script>
   </body>
 </html>
