@@ -1,3 +1,38 @@
+/* Fontes auto-hospedadas (evitam requisição bloqueante ao Google Fonts) */
+/* Inter — arquivo variável, cobre os pesos 400 a 700 */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("assets/fontes/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("assets/fontes/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fontes/marcellus-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fontes/marcellus-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --gold: #c69a4e;
   --gold-deep: #8a6428;
@@ -42,8 +77,8 @@ header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold
 .btn svg { width: 17px; height: 17px; fill: currentColor; }
 .btn-dark { background: var(--ink); color: var(--gold); }
 .btn-dark:hover { background: #000; }
-.btn-wa { background: #25d366; color: #fff; }
-.btn-wa:hover { background: #1fb457; transform: translateY(-2px); }
+.btn-wa { background: #075e54; color: #fff; }
+.btn-wa:hover { background: #0b6b5e; transform: translateY(-2px); }
 .btn-gold { background: var(--gold-grad); color: var(--on-gold); box-shadow: 0 10px 26px rgba(198,154,78,0.4); }
 .btn-gold:hover { transform: translateY(-2px); }
 .btn-outline { border: 2px solid var(--ink); color: var(--ink); }
@@ -129,7 +164,7 @@ footer .fmenu a:hover { color: var(--gold); }
 footer small { display: block; font-size: 0.82rem; line-height: 2; }
 footer .oab { color: var(--gold); }
 
-.wa-float { position: fixed; bottom: 26px; right: 26px; z-index: 90; width: 60px; height: 60px; border-radius: 50%; background: #25d366; display: grid; place-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); animation: pulse 2.6s infinite; }
+.wa-float { position: fixed; bottom: 26px; right: 26px; z-index: 90; width: 60px; height: 60px; border-radius: 50%; background: #075e54; display: grid; place-items: center; box-shadow: 0 12px 30px rgba(7,94,84,0.45); animation: pulse 2.6s infinite; }
 .wa-float svg { width: 32px; height: 32px; fill: #fff; }
 @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
 
