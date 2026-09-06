@@ -66,7 +66,7 @@ header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold
 .brand img { width: auto; height: 46px; background: rgba(255,255,255,0.9); border-radius: 8px; padding: 4px 8px; }
 .brand .bname { font-family: "Marcellus", serif; font-size: 1.3rem; color: var(--on-gold); letter-spacing: 0.08em; }
 .menu { display: flex; gap: 28px; }
-.menu a { font-size: 0.92rem; font-weight: 600; color: rgba(42,33,19,0.82); }
+.menu a { font-size: 0.92rem; font-weight: 600; color: var(--on-gold); }
 .menu a:hover { color: #fff; }
 .nav-side { display: flex; align-items: center; gap: 16px; }
 .socials { display: flex; gap: 10px; }
@@ -87,9 +87,9 @@ header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold
 .hero { background: var(--gold-grad); color: var(--on-gold); padding: 158px 0 108px; position: relative; overflow: hidden; }
 .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(80% 120% at 100% 0%, rgba(255,255,255,0.25), transparent 50%); }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 54px; align-items: center; }
-.hero .eyebrow { color: rgba(42,33,19,0.7); }
+.hero .eyebrow { color: var(--ink); }
 .hero h1 { font-size: clamp(3rem, 6vw, 4.8rem); margin-bottom: 22px; color: var(--ink); }
-.hero p { font-size: 1.14rem; color: rgba(42,33,19,0.82); max-width: 46ch; margin-bottom: 32px; }
+.hero p { font-size: 1.14rem; color: var(--on-gold); max-width: 46ch; margin-bottom: 32px; }
 .hero-cta { display: flex; gap: 15px; flex-wrap: wrap; }
 .hero-figure { position: relative; justify-self: center; }
 .hero-figure img { width: 340px; height: 340px; object-fit: cover; border-radius: 50%; border: 8px solid rgba(255,255,255,0.55); box-shadow: 0 24px 60px rgba(42,33,19,0.3); }
@@ -144,9 +144,9 @@ section { padding: 100px 0; }
 .map-placeholder .map-ext-link:hover { color: var(--ink); }
 
 .contact { background: var(--gold-grad); color: var(--on-gold); text-align: center; }
-.contact .eyebrow { color: rgba(42,33,19,0.65); }
+.contact .eyebrow { color: var(--ink); }
 .contact h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--ink); margin-bottom: 14px; }
-.contact .lead { color: rgba(42,33,19,0.8); max-width: 50ch; margin: 0 auto 40px; font-size: 1.1rem; }
+.contact .lead { color: var(--on-gold); max-width: 50ch; margin: 0 auto 40px; font-size: 1.1rem; }
 .contact-methods { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-bottom: 42px; }
 .cm { flex: 1 1 280px; background: rgba(255,255,255,0.55); border-radius: var(--radius); padding: 20px 26px; display: flex; align-items: center; gap: 13px; text-align: left; backdrop-filter: blur(4px); }
 .cm:hover { background: rgba(255,255,255,0.8); transform: translateY(-3px); }
