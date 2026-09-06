@@ -45,8 +45,9 @@
   --text: #322b1f;
   --muted: #746a58;
   --on-gold: #2a2113;
+  --on-gold-rgb: 42, 33, 19;
   --radius: 10px;
-  --shadow: 0 16px 44px rgba(42, 33, 19, 0.14);
+  --shadow: 0 16px 44px rgba(var(--on-gold-rgb), 0.14);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
@@ -54,13 +55,13 @@ body {
   font-family: "Inter", system-ui, sans-serif; color: var(--text);
   background: var(--cream); line-height: 1.68; font-size: 17px; -webkit-font-smoothing: antialiased;
 }
-h1, h2, h3, .display { font-family: "Marcellus", Georgia, serif; font-weight: 400; line-height: 1.14; letter-spacing: 0.005em; }
+h1, h2, h3 { font-family: "Marcellus", Georgia, serif; font-weight: 400; line-height: 1.14; letter-spacing: 0.005em; }
 a { color: inherit; text-decoration: none; transition: all 0.25s ease; }
 img { max-width: 100%; height: auto; display: block; }
 .wrap { max-width: 1160px; margin: 0 auto; padding: 0 30px; }
 .eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-deep); display: block; margin-bottom: 16px; }
 
-header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold-grad); box-shadow: 0 4px 20px rgba(42,33,19,0.18); }
+header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold-grad); box-shadow: 0 4px 20px rgba(var(--on-gold-rgb),0.18); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 74px; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand img { width: auto; height: 46px; background: rgba(255,255,255,0.9); border-radius: 8px; padding: 4px 8px; }
@@ -70,7 +71,7 @@ header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold
 .menu a:hover { color: #fff; }
 .nav-side { display: flex; align-items: center; gap: 16px; }
 .socials { display: flex; gap: 10px; }
-.socials a { width: 36px; height: 36px; border-radius: 50%; background: rgba(42,33,19,0.9); display: grid; place-items: center; color: var(--gold); }
+.socials a { width: 36px; height: 36px; border-radius: 50%; background: rgba(var(--on-gold-rgb),0.9); display: grid; place-items: center; color: var(--gold); }
 .socials a:hover { background: var(--ink); transform: translateY(-2px); }
 .socials svg { width: 16px; height: 16px; fill: currentColor; }
 .btn { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 0.95rem; padding: 12px 24px; border-radius: 40px; cursor: pointer; }
@@ -79,8 +80,6 @@ header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold
 .btn-dark:hover { background: #000; }
 .btn-wa { background: #075e54; color: #fff; }
 .btn-wa:hover { background: #0b6b5e; transform: translateY(-2px); }
-.btn-gold { background: var(--gold-grad); color: var(--on-gold); box-shadow: 0 10px 26px rgba(198,154,78,0.4); }
-.btn-gold:hover { transform: translateY(-2px); }
 .btn-outline { border: 2px solid var(--ink); color: var(--ink); }
 .btn-outline:hover { background: var(--ink); color: var(--gold); }
 
@@ -92,7 +91,7 @@ header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--gold
 .hero p { font-size: 1.14rem; color: rgba(42,33,19,0.82); max-width: 46ch; margin-bottom: 32px; }
 .hero-cta { display: flex; gap: 15px; flex-wrap: wrap; }
 .hero-figure { position: relative; justify-self: center; }
-.hero-figure img { width: 340px; height: 340px; object-fit: cover; border-radius: 50%; border: 8px solid rgba(255,255,255,0.55); box-shadow: 0 24px 60px rgba(42,33,19,0.3); }
+.hero-figure img { width: 340px; height: 340px; object-fit: cover; border-radius: 50%; border: 8px solid rgba(255,255,255,0.55); box-shadow: 0 24px 60px rgba(var(--on-gold-rgb),0.3); }
 .hero-figure .tag { position: absolute; bottom: 6px; right: -4px; background: var(--ink); color: var(--gold); font-weight: 600; font-size: 0.82rem; padding: 11px 18px; border-radius: 40px; letter-spacing: 0.04em; }
 
 section { padding: 100px 0; }
@@ -103,7 +102,7 @@ section { padding: 100px 0; }
 .areas { background: var(--cream-2); }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .card { background: var(--paper); border-radius: var(--radius); padding: 38px 30px; box-shadow: var(--shadow); border: 1px solid #efe4cd; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.card:hover { transform: translateY(-6px); box-shadow: 0 26px 56px rgba(42,33,19,0.18); }
+.card:hover { transform: translateY(-6px); box-shadow: 0 26px 56px rgba(var(--on-gold-rgb),0.18); }
 .card .ic { width: 66px; height: 66px; margin: 0 auto 20px; border-radius: 50%; background: var(--gold-grad); display: grid; place-items: center; color: var(--on-gold); box-shadow: 0 10px 24px rgba(198,154,78,0.35); }
 .card .ic svg { width: 30px; height: 30px; fill: currentColor; }
 .card h3 { font-size: 1.6rem; margin-bottom: 12px; color: var(--ink); }
@@ -112,7 +111,6 @@ section { padding: 100px 0; }
 .card a.more:hover { color: var(--ink); }
 
 .about { background: var(--charcoal); color: #fff; }
-.about .sec-head { display: none; }
 .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; align-items: center; }
 .about-photo { justify-self: center; position: relative; }
 .about-photo img { width: 330px; height: 330px; object-fit: cover; border-radius: 50%; border: 6px solid rgba(198,154,78,0.4); }
@@ -152,7 +150,7 @@ section { padding: 100px 0; }
 .cm:hover { background: rgba(255,255,255,0.8); transform: translateY(-3px); }
 .cm .ic { width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--gold); display: grid; place-items: center; flex-shrink: 0; }
 .cm .ic svg { width: 18px; height: 18px; fill: currentColor; }
-.cm .k { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(42,33,19,0.6); }
+.cm .k { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(var(--on-gold-rgb),0.6); }
 .cm .v { font-weight: 600; color: var(--ink); }
 
 footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 52px 0 38px; text-align: center; }
