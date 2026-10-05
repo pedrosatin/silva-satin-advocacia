@@ -38,6 +38,14 @@ The site is deployed as static files to the production domain (`silvasatin.adv.b
 
 The site includes a dedicated privacy policy (`privacidade.html`) describing how personal data is handled in accordance with Brazil's LGPD (Lei Geral de Proteção de Dados, Lei nº 13.709/2018), including the use of third-party services such as the embedded Google Maps widget.
 
+## Contributing
+
+Contributions are welcome. To report a bug or suggest an improvement, please open an issue at [silva-satin-advocacia/issues](https://github.com/pedrosatin/silva-satin-advocacia/issues).
+
+## Author
+
+Criado por [@pedrosatin](https://github.com/pedrosatin)
+
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
